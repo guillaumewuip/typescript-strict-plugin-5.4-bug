@@ -1,0 +1,56 @@
+{
+  "extends": "@blablacar/tsconfig",
+  "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "allowUnusedLabels": false,
+    "skipLibCheck": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "target": "ES6",
+    "lib": [
+      "DOM",
+      "ES6",
+      "DOM.Iterable",
+      "ScriptHost",
+      "ES2020.Intl",
+      "es2019.array"
+    ],
+    "rootDir": ".",
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "paths": {
+      "tests/*": [
+        "../tests/*"
+      ],
+      "tools/*": [
+        "../tools/*"
+      ],
+      "openapi-codegen/*": [
+        "openapi-codegen/*"
+      ]
+    },
+    "noUnusedParameters": false,
+    "allowUnreachableCode": true,
+    "strict": false,
+    "plugins": [
+      {
+        "name": "typescript-strict-plugin"
+      }
+    ]
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}
